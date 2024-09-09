@@ -1,7 +1,7 @@
 // Q1
 console.log('Q1');
 
-let numbers = [1, 5, 3, 8,4,6,7,9,10];
+let numbers = [1, 5, 3, 8, 4, 6, 7, 9, 10];
 numbers.sort((a, b) => a - b);
 console.log(numbers);
 
@@ -12,13 +12,13 @@ console.log(squarArray);
 
 // Q3
 console.log('Q3');
-let maxNumber = numbers.find(element => element >25);
+let maxNumber = numbers.find(element => element > 25);
 console.log(maxNumber);
 
 // Q4
 console.log('Q4');
-numbers.forEach(element=>{
-    console.log(element>5);
+numbers.forEach(element => {
+    console.log(element > 5);
 })
 
 // Q5
@@ -28,9 +28,9 @@ console.log(numbers.includes(3));
 
 // Q6
 console.log('Q6');
-let evenNumbers=numbers.filter(element =>{
-     return (element % 2 === 0)
-    } );
+let evenNumbers = numbers.filter(element => {
+    return (element % 2 === 0)
+});
 console.log(evenNumbers);
 
 // Q7
@@ -39,9 +39,9 @@ console.log('Q7');
 console.log(numbers);
 let middlElement = Math.floor(numbers.length / 2);
 if (numbers.length % 2 === 0) {
-    numbers.splice(middlElement - 1, 2); 
+    numbers.splice(middlElement - 1, 2);
 } else {
-   numbers.splice(middlElement, 2)
+    numbers.splice(middlElement, 2)
 }
 console.log(numbers);
 
@@ -68,21 +68,21 @@ let names = ['Alice', 'Bob', 'Charlie', 'David', 'Eve'];
 // قم بـإرجاع المصفوفة التي تحتوي على الأسماء التي تحتوي على حرف `'a'`.
 // Q1 
 
-let arrayStartA=names.filter(element => {
-        return element.startsWith('A')
+let arrayStartA = names.filter(element => {
+    return element.startsWith('A')
 })
 console.log(arrayStartA);
 
 // قم بتحويل المصفوفة إلى سلسلة نصية (string) مفصولة بـ `-`.
 // Q2
-let myString=names.join('-');
+let myString = names.join('-');
 console.log(myString);
 
 
 // ***********************************************************
-let fruits = ['apple', 'banana', 'cherry', 'date','elephant', 'bird', 'lion'];
+let fruits = ['apple', 'banana', 'cherry', 'date', 'elephant', 'bird', 'lion'];
 // قم بالتحقق  مما إذا كانت المصفوفة تحتوي على اسم يبدأ  بحرف `'b'`
-let arrayStartb=fruits.filter(element => {
+let arrayStartb = fruits.filter(element => {
     return element.startsWith('b')
 })
 console.log(arrayStartb.length);
@@ -90,7 +90,7 @@ console.log(arrayStartb.length);
 // قم بإرجاع مصفوفة جديدة تحتوي على العناصر من العنصر الثاني إلى الرابع
 
 // Q2
-let newArray=fruits.slice(2,5);
+let newArray = fruits.slice(2, 5);
 console.log(newArray);
 
 
@@ -103,20 +103,48 @@ console.log(fruits);
 let words = ['hello', 'world', 'javascript', 'array', 'function'];
 // قم بإنشاء مصفوفة جديدة تحتوي على طول كل كلمة في المصفوفة الأصلية
 
-let wordsNewArray=words.map(element=>{
+let wordsNewArray = words.map(element => {
     return element.length
 })
 console.log(wordsNewArray);
 
 // ابحث عن العنصر javascript في المصفوفة. إذا وُجد، اطبعه، وإذا لم يكن موجودًا اطبع رسالة بأنه غير موجود
 
-if(words.includes('javascript')){
-    let javas=words.find(element => {
-       return element === 'javascript'
+if (words.includes('javascript')) {
+    let javas = words.find(element => {
+        return element === 'javascript'
     })
-    console.log(javas); 
+    console.log(javas);
 }
-else{
+else {
     console.log('there is not javascript');
-    
+
 }
+
+
+// **************************************************
+// *****************function ************************
+
+function Addition(num1,num2){
+    return num1+num2
+}
+
+function subtraction(num1,num2){
+    return num1-num2
+}
+
+function multiply(num1,num2){
+    return num1*num2
+}
+function divide(num1,num2){
+    return num1/num2
+}
+
+function mod(num1,num2){
+    return num1%num2
+}
+console.log(Addition(1,2));
+console.log(subtraction(2,1));
+console.log(multiply(4,4));
+console.log(divide(6,2));
+console.log(mod(10,2));
