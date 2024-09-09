@@ -48,11 +48,7 @@ console.log(numbers);
 // Q8
 console.log('Q8');
 // قم بحساب حاصل ضرب جميع الأرقام في المصفوفة
-let count = 0;
-numbers.forEach(element=>{
-    let calcu=element*element
-    count=count+calcu;
-})
+let count = numbers.reduce((accumulator, currentValue) => accumulator * currentValue, 1);
 console.log(count);
 
 // Q9
